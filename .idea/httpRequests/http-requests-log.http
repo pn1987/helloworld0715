@@ -1,0 +1,96 @@
+GET http://localhost:8080/car/1?id=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-08T065618.200.json
+
+###
+
+GET http://localhost:8080/cookie?id=1
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/cookie?id=1
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/cookie?id=1
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/car?id=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-08T043900.200.json
+
+###
+
+GET http://localhost:8080/car/2?id=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-08T043855.200.json
+
+###
+
+GET http://localhost:8080/car?id=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-08T043846-1.200.json
+
+###
+
+GET http://localhost:8080/car?id=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-08T043846.200.json
+
+###
+
+GET http://localhost:8080/car?id=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-08T120003.200.json
+
+###
+
+GET http://localhost:8080/car?id=1
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/car?id=1
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/car
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/car
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/car
+Accept: */*
+Cache-Control: no-cache
+
+###
+

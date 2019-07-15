@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "carName": "法拉利F12 Berlinetta",
+    "minPrice": 530.8,
+    "maxPrice": 530.8,
+    "productionPlace": "意大利",
+    "introduce": "跑车 经由在风洞中精雕细琢的车身造型，创造出风阻仅0.299的c/d值，车身尺寸4618times;1942times;1273mm。",
+    "img": "img/101.jpg"
+  },
+  {
+    "id": 2,
+    "carName": "法拉利跑车",
+    "minPrice": 388.0,
+    "maxPrice": 558.8,
+    "productionPlace": "意大利",
+    "introduce": "法拉利跑车和赛车的最大特点是有绝佳的操控性及优异的性能，每辆跑车都装有一部高性能发动机，发动机最高转速可达7,000至10,000转，功率超过500马力，最高车速可达300多公里/小时。",
+    "img": "img/102.jpg"
+  },
+  {
+    "id": 3,
+    "carName": "欧陆",
+    "minPrice": 298.0,
+    "maxPrice": 568.0,
+    "productionPlace": "英国",
+    "introduce": "宾利的绝妙之处仍是大扭矩小转速以及豪华、奢侈、放松、自如的感觉。宾利除了与劳斯莱斯一样，具有巧夺天工的造车工艺及完美无瑕的品质外，重要的区别是宾利代表着优良的赛车传统。",
+    "img": "img/103.jpg"
+  },
+  {
+    "id": 4,
+    "carName": "古斯特",
+    "minPrice": 419.0,
+    "maxPrice": 575.0,
+    "productionPlace": "英国",
+    "introduce": "劳斯莱斯古斯特搭载6.6升双涡轮增压V12发动机，匹配ZF公司的8速自动变速箱，功率发挥直逼500马力，尽管定位低于幻影Phantom，但是古斯特的动力却占了上风。",
+    "img": "img/104.jpg"
+  },
+  {
+    "id": 5,
+    "carName": "Aventador",
+    "minPrice": 648.8,
+    "maxPrice": 648.8,
+    "productionPlace": "意大利",
+    "introduce": "Aventador LP700-4是兰博基尼旗下的旗舰超级跑车，作为Murcielago的换代车型，该车敞篷版本于2013年2月进入中国，售738.88万元。",
+    "img": "img/105.jpg"
+  },
+  {
+    "id": 6,
+    "carName": "幻影",
+    "minPrice": 668.8,
+    "maxPrice": 800.8,
+    "productionPlace": "意大利",
+    "introduce": "劳斯莱斯幻影是劳斯莱斯被宝马收购后推出的第一个产品，通过铝的使用，庞大的车身还不到2.5吨重，再加上6.7升V12发动机与六速自动变速箱的的通力合作，幻影0-100Km/h的加速不到6秒，出于对安全的考虑最高时速被限制在240Km/h。",
+    "img": "img/106.jpg"
+  }
+]

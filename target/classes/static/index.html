@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>猜你喜欢</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-------------jquery库-------------->
+  	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<!-------------Amazeui--------------->
+    <script type="text/javascript" src="js/amazeui.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/amazeui.css">
+    <!------------核心样式-------------->
+    <link rel="stylesheet" type="text/css" href="css/user.css">   
+	
+	<script type="text/javascript">
+		$(function () {
+
+			$.ajax({
+				url:"/car",
+				type:"GET",
+               	contentType:"application/json",
+				success:function (data) {
+					$.each(data,function (index,car) {
+						$(".note_list ul").append("<li>\n" +
+                            "<div class=\"pic\"><img src="+car.img+"/></div>\n" +
+                            "<div class=\"con\">\n" +
+								"<a href='/detail.html?id="+car.id+"'><h3>"+car.carName+"</h3></a>\n" +
+								"<div class=\"user\">\n" +
+									"<span>产地：<font>"+car.productionPlace+"</font></span>\n" +
+									"<label>"+car.minPrice+"</label>\n" +
+									"<label>~ "+car.maxPrice+" 万元</label>\n" +
+								"</div>\n" +
+								"<p>"+car.introduce+"</p>\n" +
+								"</div>\n" +
+                            "</li>");
+                    })
+                }
+			})
+
+			$.ajax({
+				url:"/cookie",
+				type:"get",
+				contentType:"application/json",
+				statusCode:{
+					200:function (data) {
+                        $(".comments_list ul").empty();
+						var li = "<li>\n" +
+							"<div class=\"note\">\n" +
+							"<div class=\"pic\"><img src="+data.img+"/></div>\n" +
+							"<div class=\"con\">\n" +
+							"<a href=\"#\"><h3>"+data.carName+"</h3></a>\n" +
+							"<p>产地：<span>"+data.productionPlace+"</span><label>"+data.num+"次浏览</label></p>\n" +
+							"</div>\n" +
+							"</div>\n" +
+							"<div class=\"text\">\n" +
+							"<p>"+data.introduce+"</p>\n" +
+							"</div>\n" +
+							"</li>"
+						$(".comments_list ul").append(li);
+                    },
+					204:function (data) {
+                        $(".comments_list ul").empty();
+                    }
+                }
+			})
+        })
+
+
+	</script>
+</head>
+<body>
+
+
+<!-----------------框架---------------->
+<div class="cw1000">
+	<div class="w280 fl">
+		<div class="public_box">
+			<div class="public_title">
+				<h2>近期浏览</h2>
+			</div>
+			<!----------------- 推荐列表 ---------------->
+			<div class="comments_list">
+				<ul>
+					<!--<li>
+						<div class="note">
+							<div class="pic"><img src="images/5.jpg"/></div>
+							<div class="con">
+								<a href="#"><h3>幻影</h3></a>
+								<p>产地：<span>意大利</span><label>5次浏览</label></p>
+							</div>
+						</div>
+						<div class="text">
+							<p>劳斯莱斯幻影是劳斯莱斯被宝马收购后推出的第一个产品，通过铝的使用，庞大的车身还不到2.5吨重，再加上6.7升V12发动机与六速自动变速箱的的通力合作，幻影0-100Km/h的加速不到6秒，出于对安全的考虑最高时速被限制在240Km/h。</p>
+						</div>
+					</li>-->
+
+				</ul>
+				<div class="h_more"><a href="#">共<b>N</b>个推荐</a></div>
+			</div>
+		</div>	
+		
+		
+	</div>
+	<div class="w700 fr">
+		<div class="public_box">
+			<div class="public_title">
+				<h2>酷车榜</h2>
+			</div>	
+			<!-----------------汽车列表---------------->
+			<div class="note_list">
+				<ul>
+					<!--<li>
+						<div class="pic"><img src="images/10.jpg"/></div>
+						<div class="con">
+							<a href="#"><h3>法拉利F12 Berlinetta</h3></a>
+							<div class="user">
+								<span>产地：<font>意大利</font></span>
+								<label>530.8</label>
+								<label>~ 530.8 万元</label>
+							</div>
+							<p>跑车 经由在风洞中精雕细琢的车身造型，创造出风阻仅0.299的c/d值，车身尺寸4618times;1942times;1273mm。</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic"><img src="images/9.jpg"/></div>
+						<div class="con">
+							<a href="#"><h3>法拉利跑车</h3></a>
+							<div class="user">
+								<span>产地：<font>意大利</font></span>
+								<label>388.0</label>
+								<label>~ 558.8 万元</label>
+							</div>
+							<p>法拉利跑车和赛车的最大特点是有绝佳的操控性及优异的性能，每辆跑车都装有一部高性能发动机，发动机最高转速可达7,000至10,000转，功率超过500马力，最高车速可达300多公里/小时。</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic"><img src="images/8.jpg"/></div>
+						<div class="con">
+							<a href="#"><h3>欧陆</h3></a>
+							<div class="user">
+								<span>产地：<font>英国</font></span>
+								<label>298.0</label>
+								<label>~ 568 万元</label>
+							</div>
+							<p>宾利的绝妙之处仍是大扭矩小转速以及豪华、奢侈、放松、自如的感觉。宾利除了与劳斯莱斯一样，具有巧夺天工的造车工艺及完美无瑕的品质外，重要的区别是宾利代表着优良的赛车传统。</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic"><img src="images/7.jpg"/></div>
+						<div class="con">
+							<a href="#"><h3>古斯特</h3></a>
+							<div class="user">
+								<span>产地：<font>英国</font></span>
+								<label>419.0</label>
+								<label>~ 575 万元</label>
+							</div>
+							<p>劳斯莱斯古斯特搭载6.6升双涡轮增压V12发动机，匹配ZF公司的8速自动变速箱，功率发挥直逼500马力，尽管定位低于幻影Phantom，但是古斯特的动力却占了上风。</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic"><img src="images/6.jpg"/></div>
+						<div class="con">
+							<a href="#"><h3>Aventador </h3></a>
+							<div class="user">
+								<span>产地：<font>意大利</font></span>
+								<label>648.8</label>
+								<label>~ 648.8 万元</label>
+							</div>
+							<p>Aventador LP700-4是兰博基尼旗下的旗舰超级跑车，作为Murcielago的换代车型，该车敞篷版本于2013年2月进入中国，售738.88万元。</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic"><img src="images/5.jpg"/></div>
+						<div class="con">
+							<a href="#"><h3>幻影 </h3></a>
+							<div class="user">
+								<span>产地：<font>意大利</font></span>
+								<label>668.8</label>
+								<label>~ 800.8 万元</label>
+							</div>
+							<p>劳斯莱斯幻影是劳斯莱斯被宝马收购后推出的第一个产品，通过铝的使用，庞大的车身还不到2.5吨重，再加上6.7升V12发动机与六速自动变速箱的的通力合作，幻影0-100Km/h的加速不到6秒，出于对安全的考虑最高时速被限制在240Km/h。</p>
+						</div>
+					</li>-->
+				</ul>
+				<!--<div class="h_more"><a href="#">共<b>10</b>辆酷车</a></div>-->
+			</div>
+		</div>	
+	</div>
+	<div class="clear"></div>
+</div>
+<!-----------------版底---------------->
+<div id="footer">
+	<p>版权所有 2006 - 2019 江苏传智播客教育科技股份有限公司</p>
+	<p>学校地址：江苏省宿迁市沭阳县常州路57号 邮编：223600苏ICP备16007882号-4</p>
+</div>
+</body>
+</html>
